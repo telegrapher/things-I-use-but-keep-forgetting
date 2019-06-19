@@ -10,7 +10,9 @@ apt-key adv --fetch-keys https://packages.cloud.google.com/apt/doc/apt-key.gpg
 ```
 ### Vim
 #### Ctags support
+```
 apt install exhuberant-ctags
-//Inside code folder create a hidden tags file
+cd repos/my_project
 ctags -R -f .tags .
-//Launch vim and test looking for a function definition with Ctrl+]
+```
+Launch vim and test looking for a function definition with Ctrl+]
