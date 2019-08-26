@@ -15,4 +15,4 @@ apt install exhuberant-ctags
 cd repos/my_project
 ctags -R -f .tags .
 ```
-Launch vim and test looking for a function definition with Ctrl+]
+Launch vim and test looking for a function definition with Ctrl+], return to the previous position with Ctrl+t
