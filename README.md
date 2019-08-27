@@ -16,3 +16,9 @@ cd repos/my_project
 ctags -R -f .tags .
 ```
 Launch vim and test looking for a function definition with Ctrl+], return to the previous position with Ctrl+t
+
+### Openssl
+#### Verify SSL certificate
+```
+openssl s_client -starttls smtp -crlf -connect smtp.office365.com:587
+```
