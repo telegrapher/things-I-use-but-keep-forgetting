@@ -22,3 +22,10 @@ Launch vim and test looking for a function definition with Ctrl+], return to the
 ```
 openssl s_client -starttls smtp -crlf -connect smtp.office365.com:587
 ```
+### Kubernetes
+#### Contexts
+```
+kubectl config current-context
+kubectl config get-contexts
+kubectl use-context yolo
+```
