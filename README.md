@@ -27,5 +27,5 @@ openssl s_client -starttls smtp -crlf -connect smtp.office365.com:587
 ```
 kubectl config current-context
 kubectl config get-contexts
-kubectl use-context yolo
+kubectl config use-context yolo
 ```
