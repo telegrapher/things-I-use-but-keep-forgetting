@@ -9,6 +9,10 @@ apt-key adv --keyserver keyserver.ubuntu.com --recv-keys XXXXXXXXXXX
 apt-key adv --fetch-keys https://packages.cloud.google.com/apt/doc/apt-key.gpg
 ```
 ### Vim
+#### Search and replace
+```
+:%s/search/replace/g 
+```
 #### Ctags support
 ```
 apt install exhuberant-ctags
