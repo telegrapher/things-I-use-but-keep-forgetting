@@ -26,6 +26,10 @@ Launch vim and test looking for a function definition with Ctrl+], return to the
 ```
 openssl s_client -starttls smtp -crlf -connect smtp.office365.com:587
 ```
+#### SSL negotiation without SNI
+```
+openssl s_client -noservername -connect host:port
+```
 ### Kubernetes
 #### Contexts
 ```
