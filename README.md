@@ -21,6 +21,12 @@ ctags -R -f .tags .
 ```
 Launch vim and test looking for a function definition with Ctrl+], return to the previous position with Ctrl+t
 
+### Curl
+#### Fixed SSL version
+```
+curl --tls-max 1.2 --tlsv1.2
+```
+
 ### Openssl
 #### Verify SSL negotiation
 ```
