@@ -8,6 +8,10 @@ Organized cheatsheet of commands I use but keep forgetting.
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys XXXXXXXXXXX
 apt-key adv --fetch-keys https://packages.cloud.google.com/apt/doc/apt-key.gpg
 ```
+#### Enable weekly fstrim
+```
+systemctl enable fstrim.timer
+```
 ### Vim
 #### Search and replace
 ```
