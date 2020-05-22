@@ -44,6 +44,13 @@ openssl s_client -starttls smtp -crlf -connect smtp.office365.com:587
 ```
 openssl s_client -noservername -connect host:port
 ```
+### Docker
+#### Inspect image content, avoid layer separation
+```
+docker create --name=YOLO image:tag
+docker export YOLO | tar t
+docker rm YOLO
+```
 ### Kubernetes
 #### Contexts
 ```
