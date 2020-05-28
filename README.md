@@ -29,6 +29,22 @@ ctags -R -f .tags .
 ```
 Launch vim and test looking for a function definition with Ctrl+], return to the previous position with Ctrl+t
 
+### Bash
+#### Configuration files
+Login shells read:
+```
+/etc/profile
+~/.bash_profile
+~/.bash_login
+~/.profile
+```
+Non login shells read:
+```
+/etc/bash.bashrc
+~/.bashrc
+```
+Since ~/.bash_profile usually loads ~/.bashrc, set there stuff for every shell
+
 ### Curl
 #### Fixed SSL version
 ```
