@@ -16,6 +16,10 @@ rm -f /var/lib/aptitude/pkgstates*
 ```
 systemctl enable fstrim.timer
 ```
+#### Change default Java version
+```
+update-alternatives --config java
+```
 ### Vim
 #### Search and replace
 ```
