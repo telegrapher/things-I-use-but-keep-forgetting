@@ -12,6 +12,14 @@ apt-key adv --fetch-keys https://packages.cloud.google.com/apt/doc/apt-key.gpg
 ```
 rm -f /var/lib/aptitude/pkgstates*
 ```
+#### Remove dangling configurations from uninstalled packages.
+```
+aptitude purge ?config-files
+```
+##### With dpkg only
+```
+dpkg --purge $(dpkg --get-selections | grep deinstall | cut -f1)
+```
 #### Enable weekly fstrim
 ```
 systemctl enable fstrim.timer
