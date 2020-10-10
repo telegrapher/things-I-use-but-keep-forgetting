@@ -88,6 +88,10 @@ kubectl config use-context yolo
 kubectl config set-context --current --namespace=yolo-namespace
 ```
 ### Hardware
+#### Great list of hardware details: inxi
+```
+inxi -Fxz
+```
 #### List of available soundcards
 ```
 cat /proc/asound/cards
@@ -96,4 +100,3 @@ cat /proc/asound/cards
 ```
 lsusb -tv
 ```
-
