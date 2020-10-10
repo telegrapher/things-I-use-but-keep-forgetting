@@ -87,3 +87,13 @@ kubectl config get-contexts
 kubectl config use-context yolo
 kubectl config set-context --current --namespace=yolo-namespace
 ```
+### Hardware
+#### List of available soundcards
+```
+cat /proc/asound/cards
+```
+#### Readable tree with every USB device
+```
+lsusb -tv
+```
+
