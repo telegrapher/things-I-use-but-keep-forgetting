@@ -14,7 +14,7 @@ git remote -v
 ```
 git remote add the_main_repository git@github.com:MainOrg/MainRepo.git
 ```
-4. Fetch the new origin.
+4. Fetch the new remote.
 ```
 git fetch the_main_repository
 ```
