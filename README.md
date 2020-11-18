@@ -51,9 +51,21 @@ apt-key adv --fetch-keys https://packages.cloud.google.com/apt/doc/apt-key.gpg
 ```
 rm -f /var/lib/aptitude/pkgstates*
 ```
+#### Remove dangling configurations from uninstalled packages.
+```
+aptitude purge ?config-files
+```
+##### With dpkg only
+```
+dpkg --purge $(dpkg --get-selections | grep deinstall | cut -f1)
+```
 #### Enable weekly fstrim
 ```
 systemctl enable fstrim.timer
+```
+#### Change default Java version
+```
+update-alternatives --config java
 ```
 ### Vim
 #### Search and replace
@@ -113,4 +125,17 @@ kubectl config current-context
 kubectl config get-contexts
 kubectl config use-context yolo
 kubectl config set-context --current --namespace=yolo-namespace
+```
+### Hardware
+#### Great list of hardware details: inxi
+```
+inxi -Fxz
+```
+#### List of available soundcards
+```
+cat /proc/asound/cards
+```
+#### Readable tree with every USB device
+```
+lsusb -tv
 ```
