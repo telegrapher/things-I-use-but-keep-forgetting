@@ -3,7 +3,16 @@ Organized cheatsheet of commands I use but keep forgetting.
 
 ## Development
 ### Git
-#### Rebase my fork to the latest commits in the main repo.
+#### Remove all staged changes (git add)
+```
+git reset
+```
+#### Remove not commited changes (repo or file)
+```
+git checkout .
+git checkout file
+```
+#### Rebase my fork to the latest commits in the main repo
 Rebase the master branch of my fork with the master branch of the main repository.
 1. Make sure that indeed I'm working with my fork and not the main repo.
 ```
