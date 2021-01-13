@@ -11,7 +11,7 @@ Where are things autostarted for new user sessions:
 /etc/xdg/autostart/thing.desktop
 ~/.config/autostart/thing.desktop
 ```
- * Systemd:
+ * Systemd ([more info](https://wiki.archlinux.org/index.php/systemd/User)):
 ```
 /etc/systemd/user/default.target.wants/* → /usr/lib/systemd/user/thing.service
 ~/.config/systemd/user/default.target.wants/*.service → ~/.local/share/systemd/user/thing.service
