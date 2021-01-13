@@ -4,6 +4,28 @@ Organized cheatsheet of commands I use but keep forgetting.
 ## [Development](./DEVELOPMENT.md)
 
 ## Linux
+### User sessions
+Where are things autostarted for new user sessions:
+ * Freedesktop [specifications](https://utcc.utoronto.ca/~cks/space/blog/linux/DesktopAppAutostart):
+```
+/etc/xdg/autostart/thing.desktop
+~/.config/autostart/thing.desktop
+```
+ * Systemd:
+```
+/etc/systemd/user/default.target.wants/* → /usr/lib/systemd/user/thing.service
+~/.config/systemd/user/default.target.wants/*.service → ~/.local/share/systemd/user/thing.service
+```
+Manage with:
+```
+systemctl --user status thing.service
+systemctl --user edit thing.service
+systemctl --user enable thing.service
+systemctl --user restart thing.service
+journalctl --user
+systemd-analyze --user security thing.service
+```
+
 ### Debian
 #### Add a key with apt-key
 ```
@@ -33,7 +55,7 @@ update-alternatives --config java
 ### Vim
 #### Search and replace
 ```
-:%s/search/replace/g 
+:%s/search/replace/g
 ```
 #### Ctags support
 ```
