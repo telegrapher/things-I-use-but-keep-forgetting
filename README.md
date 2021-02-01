@@ -12,8 +12,17 @@ Where are things autostarted for new user sessions:
 ~/.config/autostart/thing.desktop
 ```
  * Systemd ([more info](https://wiki.archlinux.org/index.php/systemd/User)):
-```
+   * Global definitions of user sessions (by root):
+ ```
 /etc/systemd/user/default.target.wants/* → /usr/lib/systemd/user/thing.service
+ ```
+ Manage with:
+ ```
+ systemctl --user --global disable thing.service
+ systemctl --user --global enable thing.service
+ ```
+   * User defining its own session:
+ ```
 ~/.config/systemd/user/default.target.wants/*.service → ~/.local/share/systemd/user/thing.service
 ```
 Manage with:
