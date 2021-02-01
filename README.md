@@ -6,13 +6,13 @@ Organized cheatsheet of commands I use but keep forgetting.
 ## Linux
 ### User sessions
 Where are things autostarted for new user sessions:
- * Freedesktop [specifications](https://utcc.utoronto.ca/~cks/space/blog/linux/DesktopAppAutostart):
+#### Freedesktop [specifications](https://utcc.utoronto.ca/~cks/space/blog/linux/DesktopAppAutostart):
 ```
 /etc/xdg/autostart/thing.desktop
 ~/.config/autostart/thing.desktop
 ```
- * Systemd ([more info](https://wiki.archlinux.org/index.php/systemd/User)):
-   * Global definitions of user sessions (by root):
+ #### Systemd ([more info](https://wiki.archlinux.org/index.php/systemd/User)):
+ * Global definitions of user sessions (by root):
  ```
 /etc/systemd/user/default.target.wants/* → /usr/lib/systemd/user/thing.service
  ```
@@ -21,7 +21,7 @@ Where are things autostarted for new user sessions:
  systemctl --user --global disable thing.service
  systemctl --user --global enable thing.service
  ```
-   * User defining its own session:
+ * User defining its own session:
  ```
 ~/.config/systemd/user/default.target.wants/*.service → ~/.local/share/systemd/user/thing.service
 ```
