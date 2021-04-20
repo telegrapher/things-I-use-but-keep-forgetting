@@ -1,15 +1,15 @@
-## Development
-### Git
-#### Remove all staged changes (git add)
+# Development
+## Git
+### Remove all staged changes (git add)
 ```
 git reset
 ```
-#### Remove not commited changes (repo or file)
+### Remove not commited changes (repo or file)
 ```
 git checkout .
 git checkout file
 ```
-#### Rebase my fork to the latest commits in the main repo
+### Rebase my fork to the latest commits in the main repo
 Rebase the master branch of my fork with the master branch of the main repository.
 1. Make sure that indeed I'm working with my fork and not the main repo.
 ```
@@ -45,4 +45,25 @@ git checkout master
 git rebase the_hash_copied_in_step_seven
 ```
 10. Push the change if needed.
+### Nuke my forked repository with the main repository.
+1. Since this should be tried if the rebase doesn't work (or is not worth solving the conflicts), the previous origins and branches should be created.
+2. Download the very last changes to the branch following the master branch of the main repository.
+```
+git checkout main_repo_master_branch
+git pull
+```
+3. Checkout the fork's master branch.
+```
+git checkout master
+```
+4. Nuke it locally with the master branch of the main repository.
+```
+git reset --hard the_main_repository/main_repo_master_branch
+```
+5. Now nuke the remote of the forked repository. Since we rewrite history, it has to be forced.
+```
+git push -f origin master
+```
+7. 
+
 
