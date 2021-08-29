@@ -34,7 +34,18 @@ systemctl --user restart thing.service
 journalctl --user
 systemd-analyze --user security thing.service
 ```
-
+### Terminal configuration
+#### TTY font size
+```
+dpkg-reconfigure console-setup
+# Choose font 'Terminus', 'fixed' has less available sizes
+# Select bigger font size, it will need framebuffer available
+```
+#### Ctrl+Alt+Backspace in X
+In /etc/default/keyboard
+```
+XKBOPTIONS="terminate:ctrl_alt_bksp"
+```
 ### Debian
 #### Add a key with apt-key
 ```
