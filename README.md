@@ -144,3 +144,7 @@ cat /proc/asound/cards
 ```
 lsusb -tv
 ```
+#### List all pulseaudio modules running
+```
+pactl list modules
+```
