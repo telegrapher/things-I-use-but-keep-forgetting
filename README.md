@@ -72,6 +72,20 @@ systemctl enable fstrim.timer
 ```
 update-alternatives --config java
 ```
+#### Apt pinning
+With testing and unstable repositories, prefer testing packages. In /etc/apt/preferences.d/
+```
+Package: *
+Pin: release a=testing
+Pin-Priority: 800
+```
+Also prefer the firefox package from unstable
+```
+Package: firefox
+Pin: release a=unstable
+Pin-Priority: 999
+```
+
 ### Vim
 #### Search and replace
 ```
