@@ -64,6 +64,9 @@ git reset --hard the_main_repository/main_repo_master_branch
 ```
 git push -f origin master
 ```
-7. 
+### Apply a PR in my local repository
+```
+curl -L <pr-url>.patch | git am -
+```
 
 
