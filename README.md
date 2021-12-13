@@ -48,6 +48,9 @@ XKBOPTIONS="terminate:ctrl_alt_bksp"
 ```
 ### Debian
 #### Add a key with apt-key
+Newer solution: https://wiki.debian.org/DebianRepository/UseThirdParty
+
+Deprecated:
 ```
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys XXXXXXXXXXX
 apt-key adv --fetch-keys https://packages.cloud.google.com/apt/doc/apt-key.gpg
