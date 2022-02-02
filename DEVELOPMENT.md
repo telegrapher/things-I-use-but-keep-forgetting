@@ -1,5 +1,18 @@
 # Development
 ## Git
+### Safely store git credentials in gnome-keyring.
+gnome-keyring is generally installed with every Linux desktop. Seahorse is the GUI used to manage all the stored credentials.
+1. Compile and install the support for git.
+```
+sudo apt install libsecret-1-0 libsecret-1-dev
+sudo cd /usr/share/doc/git/contrib/credential/libsecret
+sudo make
+```
+2. Configure git to use the new helper.
+```
+git config --global credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+```
+3. The git credentials will be stored from now on and visible in seahorse.
 ### Remove all staged changes (git add)
 ```
 git reset
