@@ -1,7 +1,7 @@
 # Development
 ## Git
 ### Safely store git credentials in gnome-keyring.
-gnome-keyring is generally installed with every Linux desktop. Seahorse is the GUI used to manage all the stored credentials.
+Gnome-keyring is generally installed with every Linux desktop. Seahorse is the GUI used to manage all the stored credentials.
 1. Compile and install the support for git.
 ```
 sudo apt install libsecret-1-0 libsecret-1-dev
