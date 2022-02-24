@@ -47,6 +47,10 @@ In /etc/default/keyboard
 XKBOPTIONS="terminate:ctrl_alt_bksp"
 ```
 ### Debian
+#### Add PPA to debian
+```
+add-apt-repository ppa:yuezk/globalprotect-openconnect
+```
 #### Add a key with apt-key
 Newer solution: https://wiki.debian.org/DebianRepository/UseThirdParty
 
