@@ -4,6 +4,11 @@ Organized cheatsheet of commands I use but keep forgetting.
 ## [Development](./DEVELOPMENT.md)
 
 ## Linux
+### Journalctl
+Logs from last boot session in reverse order
+```
+journalctl -rb -1
+```
 ### User sessions
 Where are things autostarted for new user sessions:
 #### Freedesktop [specifications](https://utcc.utoronto.ca/~cks/space/blog/linux/DesktopAppAutostart):
