@@ -127,6 +127,11 @@ Non login shells read:
 ```
 Since ~/.bash_profile usually loads ~/.bashrc, set there stuff for every shell
 
+Sometimes interactive contents of .bashrc may block session scripts. To avoid this, have the interactive parts after this line:
+```
+[ -z "$PS1" ] && return
+```
+
 ### Curl
 #### Fixed SSL version
 ```
