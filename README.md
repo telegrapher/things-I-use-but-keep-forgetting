@@ -64,6 +64,16 @@ Deprecated:
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys XXXXXXXXXXX
 apt-key adv --fetch-keys https://packages.cloud.google.com/apt/doc/apt-key.gpg
 ```
+#### Migrate old APT keys
+```
+# Find keys, note the last 8 chars of the cert to be migrated
+apt-key list
+# Export the cert
+apt-key export 87654321 | gpg --dearmour -o /usr/share/keyrings/my.gpg
+# Modify repo file
+deb [arch=amd64 signed-by=/usr/shared/keyrings/my-gpg] https://my.repo/debian testing main
+# Delete key
+apt-key delete 87654321
 #### Reset aptitude status
 ```
 rm -f /var/lib/aptitude/pkgstates*
