@@ -73,7 +73,7 @@ apt-key export 87654321 | gpg --dearmour -o /usr/share/keyrings/my.gpg
 # Modify repo file
 deb [arch=amd64 signed-by=/usr/shared/keyrings/my-gpg] https://my.repo/debian testing main
 # Delete key
-apt-key delete 87654321
+apt-key del 87654321
 ```
 #### Reset aptitude status
 ```
