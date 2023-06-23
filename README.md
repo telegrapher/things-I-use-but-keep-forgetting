@@ -69,7 +69,7 @@ apt-key adv --fetch-keys https://packages.cloud.google.com/apt/doc/apt-key.gpg
 # Find keys, note the last 8 chars of the cert to be migrated
 apt-key list
 # Export the cert
-apt-key export 87654321 | gpg --dearmour -o /usr/share/keyrings/my.gpg
+apt-key export 87654321 | gpg --dearmour -o /etc/apt/trusted.gpg.d/my.gpg
 # Modify repo file
 deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/my.gpg] https://my.repo/debian testing main
 # Delete key
