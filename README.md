@@ -124,24 +124,27 @@ Launch vim and test looking for a function definition with Ctrl+], return to the
 
 ### Bash
 #### Configuration files
-Login shells read:
+https://www.gnu.org/software/bash/manual/html_node/Bash-Startup-Files.html
+##### Interactive login shells
 ```
 /etc/profile
 ~/.bash_profile
 ~/.bash_login
 ~/.profile
 ```
-Non login shells read:
+##### Interactive non-login shells
 ```
 /etc/bash.bashrc
 ~/.bashrc
 ```
 Since ~/.bash_profile usually loads ~/.bashrc, set there stuff for every shell
 
+##### Non-interactive
 Sometimes interactive contents of .bashrc may block session scripts. To avoid this, have the interactive parts after this line:
 ```
 [ -z "$PS1" ] && return
 ```
+
 
 ### Curl
 #### Fixed SSL version
